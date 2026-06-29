@@ -18,6 +18,7 @@ dev = [
     "mypy>=2.1.0",
     "pre-commit>=4.6.0",
     "ruff>=0.15.20",
+    "taskipy>=1.14.1",
 ]
 
 [tool.ruff]
@@ -49,3 +50,8 @@ explicit_package_bases = true
 [[tool.mypy.overrides]]
 module = "tests.*"
 ignore_errors = true
+
+[tool.taskipy.tasks]
+lint = "ruff check . && mypy ."
+fix = "ruff check . --fix && ruff format"
+format = "ruff format ."
