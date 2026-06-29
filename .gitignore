@@ -1,0 +1,15 @@
+# dist
+__pycache__/
+build/
+dist/
+wheels/
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+
+# files
+*.py[oc]
+*.egg-info
+.env*
+!.env.example
